@@ -1,0 +1,26 @@
+package com.todolist.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.todolist.model.TodoList;
+import com.todolist.repo.repo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+
+@RestController
+@RequestMapping("/api")
+public class Controller {
+	
+	@Autowired
+	public repo repo;
+	
+	@PostMapping("/addtask")
+	public int postMethodName(@RequestBody  TodoList todoList  ) {
+		TodoList i = repo.save(todoList);
+		return 1;
+	}
+}

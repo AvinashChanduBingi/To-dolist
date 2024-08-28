@@ -1,0 +1,41 @@
+package com.todolist.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.todolist.model.TodoList;
+import com.todolist.repo.repo;
+
+@org.springframework.stereotype.Service
+public class Service implements serviceinterface {
+	
+	@Autowired
+	private repo repo;
+
+	@Override
+	public TodoList addTask(TodoList list) {
+		list.setCompletion(false);
+		TodoList i = repo.save(list);
+		if(i!=null)
+			return i;
+		else
+			return null;
+		
+		
+	}
+
+	@Override
+	public int updateCompletion(Integer id) {
+		return repo.findById(id)
+	            .map(task -> {
+	                task.setDate(newTaskData.getDate());
+	                task.setDue(newTaskData.getDue());
+	                task.setCompletion(newTaskData.isCompletion());
+	                task.setData(newTaskData.getData());
+	                return todoListRepository.save(task);
+	            })
+	            .orElseThrow(() -> new ResourceNotFoundException("Task not found with id " + id));
+		
+	}
+	
+
+}

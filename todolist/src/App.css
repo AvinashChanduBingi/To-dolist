@@ -1,0 +1,47 @@
+html,body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+color: #00224D;
+
+}
+.App
+{
+    box-sizing: border-box;
+    background-color: #FF204E;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 50px;
+    min-height: 100vh;
+
+
+}
+.Addtask
+{
+   max-height: 40vh;
+    background-color: #A0153E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;    
+}
+.tasks
+{
+    background-color: #A0153E;
+    min-height: 100px;
+    overflow-y: scroll;
+}
+@media (max-width:700px) {
+    .App
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 1fr ;
+        gap: 10px;
+    }
+}

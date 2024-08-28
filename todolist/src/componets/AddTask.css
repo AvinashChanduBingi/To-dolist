@@ -1,0 +1,38 @@
+.task
+{
+    height:2em;
+    width: 20em;
+    border-radius: 2em;
+    padding: 1em;
+    margin-right: 9px;
+    border: 0px;
+    background-color: #5D0E41;
+}
+.button
+{
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    background-color: #5D0E41;
+}
+.input
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    
+    
+}
+.due
+{
+    background-color: #5D0E41;
+    border: 0px;
+    border-radius: 20px;
+    padding: 5px;
+    color:whitesmoke;
+    margin-right: 2px;
+}

@@ -1,0 +1,9 @@
+package com.todolist.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.todolist.model.TodoList;
+
+public interface repo extends JpaRepository<TodoList, Integer> {
+
+}

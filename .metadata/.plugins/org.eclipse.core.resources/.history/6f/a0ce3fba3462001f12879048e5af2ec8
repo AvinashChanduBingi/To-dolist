@@ -1,0 +1,20 @@
+package com.todolist.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.todolist.model.TodoList;
+import com.todolist.repo.repo;
+
+public class Service implements serviceinterface {
+	
+	@Autowired
+	private repo repo;
+
+	@Override
+	public void addTask(TodoList list) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}
