@@ -1,7 +1,0 @@
-package com.todolist.service;
-
-import com.todolist.model.TodoList;
-
-public interface serviceinterface {
-public TodoList addTask(TodoList list);
-}
